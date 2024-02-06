@@ -23,7 +23,7 @@ export default function Popular() {
   console.log(movies);
   return (
     <>
-      <div className="w-full grid md:grid-cols-4 2xl:grid-cols-3 grid-cols-2 gap-20     ">
+      <div className="w-full grid md:grid-cols-3  2xl:grid-cols-4 gap-20     ">
         {movies.map(movie => (
           <div
             className="flex flex-col align-center cursor-pointer "

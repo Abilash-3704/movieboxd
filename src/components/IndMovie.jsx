@@ -73,7 +73,7 @@ export default function Individual() {
               // className="w-full object-contain"
             />
           </div>
-          <div className="flex justify-between gap-6  mt-8">
+          <div className="flex flex-col md:flex-row justify-between gap-6  mt-8">
             <img
               src={
                 state.posters
@@ -110,25 +110,27 @@ export default function Individual() {
                   </>
                 ) : null}
               </div>
-              <div className="w-full flex-col my-6">
-                <div className="text-white text-2xl my-3">Reviews</div>
-                {reviews?.map(x => (
-                  <div className="flex flex-col mb-8" key={x.id}>
-                    <div className="flex gap-2 mb-2">
-                      <img
-                        src={`${image_URL}${x.author_details.avatar_path}`}
-                        className="rounded-full"
-                        height={30}
-                        width={30}
-                      />
-                      <p className="text-white">{x.author_details.username}</p>
-                    </div>
-                    <p className="font-roberto text-white ">{x.content}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
+          <div className="w-full flex-col my-6">
+            <div className="text-white text-2xl my-3">Reviews</div>
+            {reviews?.map(x => (
+              <div className="flex flex-col mb-8" key={x.id}>
+                <div className="flex gap-2 mb-2">
+                  <img
+                    src={`${image_URL}${x.author_details.avatar_path}`}
+                    className="rounded-full"
+                    height={30}
+                    width={30}
+                  />
+                  <p className="text-white">{x.author_details.username}</p>
+                </div>
+                <p className="font-roberto text-white ">{x.content}</p>
+              </div>
+            ))}
+          </div>
+          {/* </div> */}
+          {/* </div> */}
         </div>
       ) : null}
     </>
